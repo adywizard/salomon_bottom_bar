@@ -20,6 +20,7 @@ class SalomonBottomBar extends StatelessWidget {
     this.color,
     this.shadowColor,
     this.surfaceTintColor,
+    this.elevation = 0,
   }) : super(key: key);
 
   /// A list of tabs to display, ie `Home`, `Likes`, etc
@@ -61,6 +62,8 @@ class SalomonBottomBar extends StatelessWidget {
 
   final Color? surfaceTintColor;
 
+  final double elevation;
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -69,6 +72,7 @@ class SalomonBottomBar extends StatelessWidget {
       shadowColor: shadowColor,
       surfaceTintColor: surfaceTintColor,
       color: color,
+      elevation: elevation,
       child: SafeArea(
         minimum: margin,
         child: Row(
